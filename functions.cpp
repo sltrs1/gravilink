@@ -79,11 +79,7 @@ std::vector<std::string> remove_even_strings(std::vector<std::string> & ref)
 
     for (auto & r : ref)
     {
-        auto [f, s] = srch.insert(std::make_pair(r, 1));
-        if (s == false)
-        {
-            srch.at(r) = srch.at(r) + 1;
-        }
+        ++srch[r];
     }
 
     for (auto & r : ref)
